@@ -1,0 +1,272 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>建行电子商务服务平台</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/thickbox.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/jquery-calendar.css" rel="stylesheet" type="text/css" />
+<link href="css/yyzs.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="js/jquery-calendar.js" type="text/javascript"></script>
+<!--弹出窗的CSS和JS-->
+<link rel="stylesheet" type="text/css" href="css/promptCss.css"/>
+<script type="text/javascript" src="js/promptDialog.js"></script>
+<!--判断和弹出窗的CSS和JS-->
+<script type="text/javascript" src="js/util.js"></script>
+<!--拖拽移动-->
+<script type="text/javascript" src="js/jquery-ui-1.js"></script> 
+
+<script>
+$(document).ready(function(){
+	//查询条件处理
+	$("#btn-packUp").click(function(){
+	  $(".search-bar").hide();
+	  $("#btn-search").hide(); 
+	  $("#btn-packUp").hide(); 
+	  $("#btn-show").show(); 
+	});
+	
+	$("#btn-show").click(function(){
+	  $(".search-bar").show();
+	  $("#btn-search").show(); 
+	  $("#btn-packUp").show(); 
+	  $("#btn-show").hide(); 
+	});
+
+});
+</script>
+<script>
+	$(document).ready(function(){
+		//页签切换处理
+		$("#hand").click(function(){
+			$("#market-info-hand").show();
+			$("#market-info-system").hide();
+			$("#hand-li").addClass('on');
+			$("#system-li").removeClass('on');
+			$(".bmd_top_all_add").hide();
+		});
+
+		$("#system").click(function(){
+			$("#market-info-hand").hide();
+			$("#market-info-system").show();
+			$("#hand-li").removeClass('on');
+			$("#system-li").addClass('on');
+			$(".bmd_top_all_add").show();
+		});	
+	});
+</script>
+
+<script>
+	$(function(){
+			$('.top-title ul li').click(function(){
+				$(this).addClass('on').siblings('li').removeClass('on');
+				var _index=$(this).index();
+				$('.div_tab').eq(_index).show().siblings('.div_tab').hide();	
+				
+			})
+	})
+</script>
+<style type="text/css">
+<!--
+.style3 {font-size: 11px}
+-->
+</style>
+</head>
+
+<body>
+<div id="main" class="bmd">
+    <div class="top-tab">
+      <ul>
+        <li class="tab-home">首页</li>
+        <li class="tab-link">洽谈会预告</li>
+      </ul>
+    </div>
+    <div class="main-content">
+       <!--<div class="top-title">当前位置：<a href="javascript:;">在线洽谈会</a> > 洽谈会审核</div>-->
+       <div class="top-title mt10">
+         <ul>
+            <li id="hand-li" class="on"><a href="javascript:;" id="hand">洽谈会推介</a></li>
+         </ul>
+       </div>
+       <div class="review div_tab" style="display:block;">
+              <div id="market-info-hand" class="qysbyx">
+                    <div class="search-bar">
+                      <table width="600">
+                        <tr>
+                          <td>洽谈会编号：<input type="text" class="input" maxlength="40"/></td>
+                          <td>洽谈会主题：<input type="text" class="input" maxlength="40"/></td>
+                            
+                          <td width="80" ><input name="button" type="button" class="button" id="button_query" value="查询" /></td>
+						</tr>
+                      </table>
+                      <table>
+                        <tr>                        
+                          <td width="80" ><input name="button" type="button" class="button" id="button_query" value="提交审核" /></td>
+                          <td width="55" ><input name="button" type="button" class="button" id="button_query" value="预览" /></td>
+                        </tr>
+                      </table>	
+                    </div>
+         </div>
+				  <!-- BEGIN 常见问题管理 -->
+				  <table border="1" cellspacing="0" class="table " style="margin-bottom:0px;" id="qthlb">
+                    <thead>
+                      <tr>
+                        <td width="8%">洽谈会编号</td>
+                        <td width="30%">洽谈会主题</td>
+                        <td width="10%">洽谈金额（万元）</td>
+                        <td width="13%">开始时间</td>
+                        <td width="10%">报名截止时间	</td>
+                        <td width="8%">洽谈会状态</td>
+                        <td width="6%">报名人数</td>
+                        <td width="8%">排序</td>
+                        <td width="5%">操作</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                      	<td>111314</td>
+                        <td class="text-left">欧伦泰防火设备供应</td>
+                        <td>100</td>
+                        <td>2015-12-20 08:30</td>
+                        <td>2015-12-16</td>
+                        <td>报名中</td>
+                        <td>122</td>
+                        <td><img src="images/ico-top_2.gif"> <img src="images/ico-up_2.gif"> <img src="images/ico-down.gif"> <img src="images/ico-down_3.gif"></td>
+                        <td><a href="javascript:;" id="delbut"><img src="images/ico-del.gif" ></a></td>
+                      </tr>
+                       <tr>
+                      	<td>151115</td>
+                        <td class="text-left">紧急采购各类裘皮原料，裘皮制品</td>
+                        <td>320</td>
+                        <td>2015-12-26 09:00</td>
+                        <td>2015-12-24</td>
+                        <td>报名中</td>
+                        <td>127</td>
+                        <td><img src="images/ico-top.gif"> <img src="images/ico-up.gif"> <img src="images/ico-down.gif"> <img src="images/ico-down_3.gif"></td>
+                        <td><img src="images/ico-del.gif" ></td>
+                      </tr>
+                       <tr>
+                      	<td>152415</td>
+                        <td class="text-left">上海青客家居用品采购专场</td>
+                        <td>300</td>
+                        <td>2015-12-28 09:00</td>
+                        <td>2015-12-26</td>
+                        <td>报名中</td>
+                        <td>123</td>
+                        <td><img src="images/ico-top.gif"> <img src="images/ico-up.gif"> <img src="images/ico-down.gif"> <img src="images/ico-down_3.gif"></td>
+                        <td><img src="images/ico-del.gif" ></td>
+                      </tr>
+                       <tr>
+                      	<td>111515</td>
+                        <td class="text-left">60年老牌机床龙头企业，开启采销一体电商化时代！</td>
+                        <td>100</td>
+                        <td>2015-12-29 08:30</td>
+                        <td>2015-12-26</td>
+                        <td>报名中</td>
+                        <td>156</td>
+                        <td><img src="images/ico-top.gif"> <img src="images/ico-up.gif"> <img src="images/ico-down_1.gif"> <img src="images/ico-down_2.gif"></td>
+                        <td><img src="images/ico-del.gif" ></td>
+                      </tr>
+                    </tbody>
+                  </table>
+				  <!-- END 常见问题管理 -->				  				  
+                  <dl class="page-link pb10 clear">
+                    <dd class="fl"> <span>首页</span> <span>上一页</span> <span>下一页</span> <span>末页</span> 第1页 共1页 共4条
+                      <input type="text" name="jumppageNO" id="jumppageNO" class="input pageNo" value="" />
+                      <input type="button" value="跳转" class="button pageGo" style="margin-right:0" />
+                    </dd>
+              </dl>
+          <div class="top-title mt10">
+          <table height:"60"></table>
+         <ul>
+            <li id="hand-li" class="on"><a href="javascript:;" id="hand">洽谈会列表</a></li>
+         </ul>
+       </div>
+       <div class="search-bar">
+       <table width="900">
+        	<tr>
+            	<td>洽谈会主题：<input type="text" class="input" maxlength="40"></td>
+                <td>开始时间：<input type="text" class="input" maxlength="40"> <span>至</span> <input type="text" class="input" maxlength="40"></span></td>
+                <td>洽谈会状态：<select class="main_top_sel"><option>报名中</option></select></td>
+                <td><input type="button" type="button" class="button" id="button_query" value="查询"> </td>
+            </tr>
+         </table>
+         <table border="1" cellspacing="0" class="table " style="margin-bottom:0px;" id="tjlb">
+                    <thead>
+                      <tr>
+                        <td width="8%">洽谈会编号</td>
+                        <td width="20%">洽谈会主题</td>
+                        <td width="10%">洽谈金额（万元）</td>
+                        <td width="20%">开始时间</td>
+                        <td width="14%">报名截止时间</td>
+                        <td width="8%">洽谈会状态</td>
+                        <td width="10%">报名人数</td>
+                        <td width="10%">操作</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                      	<td>201173</td>
+                        <td class="text-left">五金设备大采购</td>
+                        <td>2500</td>
+                        <td>2016-01-26 09:00</td>
+                        <td>2016-01-20</td>
+                        <td>报名中</td>
+                        <td>9</td>
+                        <td><a href="javascript:;" id="tuijian">推荐</a></td>
+                      </tr>
+                      <tr>
+                      	<td>201415</td>
+                        <td class="text-left">求购幻灯片的印刷</td>
+                        <td>100</td>
+                        <td>2016-01-14 08:00</td>
+                        <td>2016-01-11</td>
+                        <td>报名中</td>
+                        <td>7</td>
+                        <td><a href="">推荐</a></td>
+                      </tr>
+                    </tbody>
+                   </table>
+                  <!-- END 常见问题管理 -->				  				  
+                  <dl class="page-link pb10 clear">
+                    <dd class="fl"> <span>首页</span> <span>上一页</span> <span>下一页</span> <span>末页</span> 第1页 共1页 共3条
+                      <input type="text" name="jumppageNO" id="jumppageNO" class="input pageNo" value="" />
+                      <input type="button" value="跳转" class="button pageGo" style="margin-right:0" />
+                    </dd>
+              </dl>
+         </div>
+      </div>
+    </div>
+</div>
+           
+           
+	<!-- <div class="shjj" style="width:540px; display:none; margin:5px;"
+	  <table class="table-tan">
+		<tr>
+		  <th>拒绝原因：</th>
+		  <td><textarea rows="10" cols="60" style="padding:5px;" ></textarea></td>
+		</tr>
+	  </table>
+	</div> -->  
+
+<div class='showTips'></div>
+  <div class='greenTips'></div>
+<script>
+$(function(){
+	 /*删除按钮*/
+ 	$('#delbut').click(function(e) {
+ 		$('#qthlb tr:eq(1)').hide();
+	});
+	
+	/*推荐按钮*/
+ 	$('#tuijian').click(function(e) {
+ 		//$('#tjlb tr:eq(1)').hide();
+ 		var tr = '<tr><td>201173</td><td class="text-left">五金设备大采购</td><td>2500</td><td>2016-01-26 09:00</td><td>2016-01-20 </td><td>报名中</td><td>9</td><td><img src="images/ico-top.gif"> <img src="images/ico-up.gif"> <img src="images/ico-down_1.gif"> <img src="images/ico-down_2.gif"></td><td><a href="javascript:;"><img src="images/ico-del.gif" ></a></td></tr>';
+ 		$("#qthlb").append(tr);
+	});
+})
+</script>
+</body>
+</html>

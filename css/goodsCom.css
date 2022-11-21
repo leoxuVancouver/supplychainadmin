@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+.button{
+	display:inline-block;
+	padding:0 10px;
+	/*height:22px;
+	line-height:22px;
+	border:1px solid #FFCACA;
+	background:url(../images/bg.png) repeat-x 0 -10px #fff;
+	border-radius:3px;
+	margin: 0 5px 0 0;*/
+	color:#333;
+	text-decoration:none;
+}
+.button_submit{
+	padding:0 10px;
+	/*height:22px;
+	line-height:22px;
+	margin: 0 5px 0 0;*/
+	color:#333;
+	text-decoration:none;
+}
+.nor-text{
+	width:200px;
+	height:20px;
+	margin:0 5px 0 0;
+}
+.short-select{
+	width:153px;
+	height:20px;
+	margin:0 5px 0 0;
+}
+.subnav{
+	padding-left:10px;
+	line-height:26px;
+	height:26px;
+	font-size:12px;
+	font-family:"宋体";
+	color:#183152
+}
+.subnav_a{
+	float:right;
+	font-weight:bold;
+	color:#0066cc;
+	margin:0 5px;
+	text-decoration:none;
+}
+.subnav b a{
+	float:none;
+	color:#183152;
+	text-decoration:none;
+}
+.search-table{
+	background:#fbf6f6;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	border-top:1px solid #ddd;	
+	border-left:1px solid #ddd;	
+}
+.search-table th,.search-table td{
+	height:35px;
+	border-bottom:1px solid #ddd;
+	border-right:1px solid #ddd;
+	padding-left:5px;
+}
+.search-table th{
+	text-align:right;
+	width:130px;
+}
+.search-table td{
+	background:#fff;
+}
+.search-table .th_w{
+	width:72px;
+}
+.td_w{
+	width:122px;
+}
+
+.radio{
+	float:left;
+	margin:10px 5px 5px 0;
+}
+.radio-txt{
+	float:left;
+	margin:7px 10px 5px 0;
+}
+.ac-times{
+	margin:8px 0 5px 0;
+}
+.ac-times li{
+	height:25px;
+	overflow:hidden;
+	margin:5px 0 0 0; 
+	
+}
+.ac-time-bt li{
+	height:30px;
+	overflow:hidden;
+	margin:0;
+}
+.w204 {
+	width: 204px;
+}
+.small-text {
+	width: 65px;
+	height: 20px;
+	margin: 0 5px 0 0;
+}
+
+
+/*上下移动*/
+.rs-up{
+	width:15px;
+	height:21px;
+	overflow:hidden;
+	background:url(../images/btn.png) -16px 0 no-repeat;
+	display:inline-block;
+	cursor:pointer;
+	margin:9px 5px;
+}
+.rs-up:hover{
+	background:url(../images/btn.png) -16px 0px no-repeat;
+}
+.rs-up-on{
+	background:url(../images/btn.png) 0px 0px no-repeat;
+}
+.rs-up-on:hover{
+	background:url(../images/hoverBtn.png) 1px 1px no-repeat;
+	/*background:url(../images/opbtnhover.png) 0px 35px no-repeat;*/
+}
+
+.rs-down{
+	width:14px;
+	height:21px;
+	overflow:hidden;
+	background:url(../images/btn.png) -32px 0 no-repeat;
+	display:inline-block;
+	cursor:pointer;
+	margin:9px 5px;
+}
+.rs-down:hover{
+	background:url(../images/btn.png) -32px 0 no-repeat;
+}
+.rs-down-on{
+	background:url(../images/btn.png) -48px 0 no-repeat;
+}
+.rs-down-on:hover{
+	background:url(../images/hoverBtn.png) -19px 1px no-repeat;
+}
+.tcenter {
+	text-align: center;
+}
+.ipt-width{
+	width:80px;
+}

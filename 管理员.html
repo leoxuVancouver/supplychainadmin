@@ -1,0 +1,218 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>建行电子商务服务平台</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/thickbox.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/jquery-calendar.css" rel="stylesheet" type="text/css" />
+<link href="css/yyzs.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="js/jquery-calendar.js" type="text/javascript"></script>
+<!--弹出窗的CSS和JS-->
+<link rel="stylesheet" type="text/css" href="css/promptCss.css"/>
+<script type="text/javascript" src="js/promptDialog.js"></script>
+<!--判断和弹出窗的CSS和JS-->
+<script type="text/javascript" src="js/util.js"></script>
+<!--拖拽移动-->
+<script type="text/javascript" src="js/jquery-ui-1.js"></script> 
+
+</head>
+
+<body>
+<div id="main" class="bmd">
+    <div class="top-tab">
+      <ul>
+        <li class="tab-home">首页</li>
+        <li class="tab-link">管理员管理</li>
+      </ul>
+    </div>
+    <div class="main-content">
+       <div class="top-title mt10">
+         <ul>
+            <li id="hand-li" class="on"><a href="javascript:;" id="hand">管理员名单</a></li>
+         </ul>
+       </div>
+       <div class="review div_tab" style="display:block;">
+              <div id="market-info-hand" class="qysbyx">
+                    <div class="search-bar">
+                      <table width="600">
+                        <tr>
+                          <th width="80">登录名称：</th>
+                          <td width="120"><input name="title" type="text" class="input" maxlength="40" /></td>
+                          <th width="80">管理员名称：</th>
+                          <td width="120"><input name="title" type="text" class="input" maxlength="40" /></td>
+                          <td width="80" ><input name="button" type="button" class="button" id="button_query" value="查询" /></td>
+                        </tr>
+                      </table>
+                    </div>
+         </div>
+                  <table border="1" cellspacing="0" class="table " style="margin-bottom:0px;" id="lbmd">
+                    <thead>
+                      <tr>
+                        <td width="10%">序号</td>
+                        <td width="30%">登录名称</td>
+                        <td width="20%">管理员名称</td>
+                        <td width="20%">联系电话</td>
+                        <td width="20%">操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>yuyan_wang</td>
+                        <td>王语妍</td>
+                        <td>15812348888</td>
+                        <td><img src="images/ico-del.gif" id="delbut"><a href="javascript:;" id="xg" class="pl_10">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>afsipj881</td>
+                        <td>王明</td>
+                        <td>13448138828</td>
+                        <td><img src="images/ico-del.gif" ><a href="javascript:;" class="pl_10">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>jpouuuj</td>
+                        <td>钱小珊</td>
+                        <td>13722345444</td>
+                        <td><img src="images/ico-del.gif" ><a href="javascript:;" class="pl_10">修改</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <dl class="page-link pb10 clear">
+                    <dd class="fl"> <span>首页</span> <span>上一页</span> <span>下一页</span> <span>末页</span> 第1页 共1页 共3条
+                      <input type="text" name="jumppageNO" id="jumppageNO" class="input pageNo" value="" />
+                      <input type="button" value="跳转" class="button pageGo" style="margin-right:0" />
+                    </dd>
+              </dl>
+							<!-- 待加入列表  -->
+              <div class="top-title mt10">
+			          <table height:"60"></table>
+			         <ul>
+			            <li id="hand-li" class="on"><a href="javascript:;" id="hand">待加入列表</a></li>
+			         </ul>
+			       </div>
+			       
+			       <div id="market-info-hand" class="qysbyx">
+                    <div class="search-bar">
+                      <table width="600">
+                        <tr>
+                          <th width="80">登录名称：</th>
+                          <td width="120"><input name="title" type="text" class="input" maxlength="40" /></td>
+                          <th width="80">用户名：</th>
+                          <td width="120"><input name="title" type="text" class="input" maxlength="40" /></td>
+                          <td width="80" ><input name="button" type="button" class="button" id="button_query" value="查询" /></td>
+                        </tr>
+                      </table>
+                    </div>
+         </div>
+                  <table border="1" cellspacing="0" class="table " style="margin-bottom:0px;" id="hxmd">
+                    <thead>
+                      <tr>
+                        <td width="10%">序号</td>
+                        <td width="30%">登录名称</td>
+                        <td width="20%">用户名</td>
+                        <td width="20%">联系电话</td>
+                        <td width="20%">操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>ssww23rt</td>
+                        <td>张小泉</td>
+                        <td>13722345888</td>
+                        <td><a href="javascript:;" id="tuijian">加入名单</a></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>ggyrdd3</td>
+                        <td>欧小芬</td>
+                        <td>13344556000</td>
+                        <td><a href="javascript:;">加入名单</a></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>mkiuhfd</td>
+                        <td>钱三自</td>
+                        <td>13722345678</td>
+                        <td><a href="javascript:;">加入名单</a></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>jgyte34</td>
+                        <td>梁思域</td>
+                        <td>13722345345</td>
+                        <td><a href="javascript:;">加入名单</a></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>juiyg7</td>
+                        <td>周柳玉</td>
+                        <td>13722345123</td>
+                        <td><a href="javascript:;">加入名单</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <dl class="page-link pb10 clear">
+                    <dd class="fl"> <span>首页</span> <span>上一页</span> <span>下一页</span> <span>末页</span> 第1页 共1页 共5条
+                      <input type="text" name="jumppageNO" id="jumppageNO" class="input pageNo" value="" />
+                      <input type="button" value="跳转" class="button pageGo" style="margin-right:0" />
+                    </dd>
+              </dl>
+      </div>
+    </div>
+</div>
+           
+ <!--修改查看弹层-->
+<div class="xgly" style="width:540px; display:none; margin:5px;">
+  <table class="table">
+  	<tr>
+      <th style="width:100px;text-align:right;">登录名称：</th>
+      <td style="text-align:left;"><input name="louName" type="text" class="input" maxlength="40" value="ccfoiur" disabled="disabled"/></td>
+    </tr>
+    <tr>
+      <th style="width:100px;text-align:right;">管理员名称：</th>
+      <td style="text-align:left;"><input name="louName" type="text" class="input" maxlength="40" value="区小芬" disabled="disabled"/></td>
+    </tr>
+    <tr>
+      <th style="width:100px;text-align:right;"><font color="red">*</font>联系电话：</th>
+      <td style="text-align:left;"><input name="louName" type="text" class="input" maxlength="40" value="13722345678"/></td>
+    </tr>
+  </table>
+</div>           
+
+</div>
+<script>
+$(function(){
+	/*修改*/
+	$('#xg').click(function(e) {
+    var $this = $(this);
+					m.promptDialog({
+						title: "修改管理员",
+						contObj:$(".xgly"),
+						cancleBtnValue:'取消',
+						okBtnValue:'提交',
+						})
+  });
+ })
+
+$(function(){
+	 /*删除按钮*/
+ 	$('#delbut').click(function(e) {
+ 		$('#lbmd tr:eq(1)').hide();
+	});
+	
+	/*推荐按钮*/
+ 	$('#tuijian').click(function(e) { 
+ 		//$('#hxmd tr:eq(1)').hide();
+ 		var tr = '<tr><td>1</td><td>ssww23rt</td><td>张一</td><td>13722345888</td><td><img src="images/ico-del.gif" ><a href="javascript:;" class="pl_10">修改</a></td></tr>';
+ 		$('#lbmd').append(tr);
+	});
+})
+</script>
+</body>
+</html>

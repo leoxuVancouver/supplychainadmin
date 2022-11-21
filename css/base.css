@@ -1,0 +1,163 @@
+@charset "utf-8";
+/*=================================*/
+/* 中国建设银行电子商务金融服务平台管理系统
+/* 2014-03-25
+/* Author:广州市时代财富科技有限公司
+/* By: Pisceo
+/* Revision 1.0
+/*=================================*/
+
+/*====================*/
+/*=== 重置标签样式 ===*/
+/*====================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre, 
+form,fieldset,input,textarea,p,blockquote,th,td { 
+    padding: 0; 
+    margin: 0; 
+	font-family:Verdana,宋体;
+	font-size:12px;
+}
+
+table { 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+} 
+fieldset,img { 
+    border: 0; 
+} 
+address,caption,cite,code,dfn,em,strong,th,var { 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+ol,ul { 
+    list-style: none; 
+} 
+caption,th { 
+    text-align: left; 
+} 
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	font-size: 100%;
+} 
+q:before,q:after { 
+    content:''; 
+} 
+abbr,acronym {
+    border: 0; 
+}
+input,select{vertical-align:middle;}
+/*===================*/
+/*=== 主要样式 ===*/
+/*===================*/
+body {
+	font-size: 12px;
+	line-height: 150%;
+	color: #333;
+	font-family: "宋体";
+	
+}
+a, a:visited { 
+	color:#333;
+	text-decoration:none;
+}
+a:hover, a:active {
+	color:#0064C1;
+	text-decoration:underline;
+}
+ul,ul li{
+	list-style-type:none;
+}
+texteare,input,select{
+	font-size:12px;
+	
+}
+.clear{
+	clear:both;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.dis{
+	display:block;
+}
+.undis{
+	display:none;
+}
+..dis-ib{
+	display:inline-block;
+}
+.hand{
+	cursor:pointer;
+}
+a.blue_l:link,a.blue_l:visited { color:#369}
+/*间距*/
+.ml1{margin-left:1px;}
+.mr1{margin-right:1px;}
+.mt5{margin-top:5px;}
+.mb5{margin-bottom:5px;}
+.ml5{margin-left:5px;}
+.mr5{margin-right:5px;}
+.mh5{margin:0px 5px;}
+.mv5{margin:5px 0px;}
+.m5{margin:5px;}
+.mt10{margin-top:10px;}
+.mb10{margin-bottom:10px;}
+.ml10{margin-left:10px;}
+.mr10{margin-right:10px;}
+.mh10{margin:0px 10px;}
+.mv10{margin:10px 0px;}
+.m10{margin:10px;}
+.pt5{padding-top:5px;}
+.pb5{padding-bottom:5px;}
+.pl5{padding-left:5px;}
+.pr5{padding-right:5px;}
+.ph5{padding:0px 5px;}
+.pv5{padding:5px 0px;}
+.p5{padding:5px;}
+.pt10{padding-top:10px;}
+.pb10{padding-bottom:10px;}
+.pl10{padding-left:10px;}
+.pr10{padding-right:10px;}
+.ph10{padding:0px 10px;}
+.pv10{padding:10px 0px;}
+.p10{padding:10px;}
+.cf:after{content:"";display:table;clear:both;}
+.cf{zoom:1;}
+/*颜色*/
+.green{color:#090;}
+.red{color:#f00; margin-top:3px;  }
+.gray{color:#999; }
+.blue{color:#03c;}
+.orange{color:#f60;}
+
+
+.xinhao{ background: url(../images/xinhao.png) no-repeat left; color:#f00; display:inline-block; width: 5px;height: 10px; vertical-align:middle; font-weight:normal;}
+.input001{ padding:0px 0 30px 0; }
+.fn-bold{ font-weight: bold;}
+
+.strong{ font-weight:bold;}
+
+.cyd_lmbt{ padding:20px 0;}
+.cyd_lmbt a{ text-decoration:none;}
+
+.cyd_lmbt .cydxg{ vertical-align:middle;}
+
+
+.showTips{width:100%;color:#fff;font-weight:bold;font-size:18px;height:39px;line-height:40px;background:url(../images/tip.png) repeat-x;z-index:9999;position:fixed;right:0px;bottom:-39px;text-align:center;}
+.greenTips{width:100%;color:#fff;font-weight:bold;font-size:18px;height:39px;line-height:40px;background:url(../images/greenTip.png) repeat-x;z-index:9999;position:fixed;right:0px;bottom:-39px;text-align:center;}
+
+.mar-r10 { margin-right:20px}
+
+/*2015-11-10*/
+.bmd .table td.text-left{text-align:left;}
+.input_a{width:80px;}
+
+/* 新增12-03 */
+.tan{
+	text-align:right;
+	width:100px;
+}
+.pl_10{padding-left:10px;}

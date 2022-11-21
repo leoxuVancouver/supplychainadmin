@@ -1,0 +1,180 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>建行电子商务服务平台</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/yyzs.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery-calendar.css" rel="stylesheet" type="text/css" /> 
+<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="js/jquery-calendar.js" type="text/javascript"></script>
+<!--弹出窗的CSS和JS-->
+<link rel="stylesheet" type="text/css" href="css/promptCss.css"/>
+<script type="text/javascript" src="js/promptDialog.js"></script>
+<!--判断和弹出窗的CSS和JS-->
+<script type="text/javascript" src="js/util.js"></script>
+<!--拖拽移动-->
+<script type="text/javascript" src="js/jquery-ui-1.js"></script> 
+<script>
+function loadfunction()
+	{
+
+    var url =  this.location.search;
+    var newstr=url.replace("?sid=","");
+    if (newstr==1)	//功能按钮显示
+    {
+    	 $("#stat1").hide();
+    	 $("#stat2").show();
+    }
+	}
+</script>
+</head>
+
+<body onload="loadfunction()">
+<div id="main">
+  <div class="top-tab">
+    <ul>
+      <li class="tab-home">首页</li>
+      <li class="tab-link">洽谈会详情</li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <!--<div class="top-title">当前位置：<a href="javascript:;">在线洽谈会</a> ><a href="企业申办意向管理.html">申办意向管理</a> >洽谈会详情</div>-->
+    <div class="top-title mt10">
+      <ul>
+        <li id="hand-li" class="on"><a href="javascript:;" id="hand">洽谈会详情</a></li>
+      </ul>
+    </div>
+    <!--<a href="洽谈会申办审核.html"><input value="返回" class="button" type="button" style="float:right; margin:10px;"></a> -->
+    <div id="market-info-hand">
+      <table border="1" cellspacing="0" class="table table-add mt10 mb10 w810 sbyxxq" style=" width:100%;margin-bottom:0px;" id="dial-mob">
+        <thead>
+          <tr>
+            <th colspan="4" style="text-align:center; font-size:14px;">洽谈会详情</th>
+          </tr>
+        </thead>
+        <tbody>
+        	<tr>
+            <th width="11%">洽谈会编号：</th>
+            <td width="39%">082709</td>
+            <th width="11%">洽谈会主题：</th>
+            <td width="39%">欧伦泰防火设备供应</td>
+          </tr>
+          <tr>
+            <th width="11%">洽谈会类型：</th>
+            <td width="39%">供应</td>
+            <th>行业类目：</th>
+            <td>安全防护产品</td>
+          </tr>
+          <tr>
+            <th>洽谈金额：</th>
+            <td>100万元</td>
+            <th>报名截止时间：</th>
+            <td>2015-12-16</td>
+          </tr>
+          <tr>
+            <th>洽谈起止时间：</th>
+            <td colspan="3">2015-12-20 08:30 - 11:00</td>
+          </tr>
+          <tr>
+            <th>供应清单：</th>
+            <td colspan="3">
+            	<table border="1" cellspacing="0" width="80%" class="table-add2">
+                  <tr>
+                    <th width="35%">产品名称</th>
+                    <th width="40%">规格描述</th>
+                    <th width="10%">数量</th>
+                    <th width="5%">单位</th>
+                    <th width="10%">参考价</th>
+                  </tr>
+                  <tr>
+                    <td class="name_left">干粉灭火器</td>
+                    <td>6KG</td>
+                    <td>1000</td>
+                    <td>个</td>
+                    <td>150</td>
+                  </tr>
+                  <tr>
+                    <td class="name_left">水基灭火器</td>
+                    <td>6升</td>
+                    <td>1000</td>
+                    <td>个</td>
+                    <td>150</td>
+                  </tr>
+                  <tr>
+                    <td class="name_left">合金钢瓶二氧化碳灭火器</td>
+                    <td>5KG</td>
+                    <td>1000</td>
+                    <td>个</td>
+                    <td>700</td>
+                  </tr>
+            	</table>
+                <div class="other"><b>其他说明：</b><br/>根据质检总局、公安部、国家认监委日前联合发布的公告，决定对手提式灭火器等59种消防产品实施强制性产品认证（“CCC认证”）的要求，浙江欧伦泰防火设备有限公司正积极配合参与国家标准制定部门做灭火器“CCC认证”的前期工作。公司规模：2013年灭火器销售3.50亿人民币，厂房面积60000平方，现有员工500余人。欧伦泰是全球主要消防巨头（UTC / CHUBB / ETC.）的供应商,除了出口产品，2012开始，欧伦泰灭火器恢复在国内市场销售。</div>
+            </td>
+          </tr>
+          <!-- <tr>
+            <th width="11%">报名方要求:</th>
+            <td colspan="3">
+				<b>报名需提供信息：</b>合作物流企业，海外合作企业<br />
+            	<b>报名方要求：</b><br />
+                1、在中国大陆合法注册的企业单位或合法登记的非企业单位。<br/>
+2、申请单位的经营范围包含进口贸易，或可提供从事进口、经销境外产品业务的有关证明，如发票、合同、报关单等。<br/>
+3、所需进口的产品符合进口展区设置的产品范围。<br/>
+4、采购商对进口产品具有决策权或建议权。
+            </td>
+          </tr> -->
+        <thead>
+          <tr>
+            <th colspan="4" style="text-align:center; font-size:14px;">管理员</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>管理员：</th>
+            <td colspan="3">王语妍<span style="display:-moz-inline-box; display:inline-block; width:20px;"></span>15812348888
+            </td>
+          </tr>
+         </tbody>
+        
+        <thead>
+          <tr>
+            <th colspan="4" style="text-align:center; font-size:14px;">申办方信息</th>
+          </tr>
+        </thead>
+        <tbody>
+        	<tr>
+            <th>用户名：</th>
+            <td>ouluntai</td>
+            <th>企业名称：</th>
+            <td>欧伦泰防火设备有限公司</td>
+          </tr>
+          <tr>
+            <th>企业所在地：</th>
+            <td>浙江省 宁波市</td>
+            <th>企业性质：</th>
+            <td>私营企业</td>
+          </tr>
+          <tr>
+            <th>联系人：</th>
+            <td>李先生</td>
+            <th>联系电话：</th>
+            <td>18058541188</td>
+          </tr>
+           <tr>
+            <th>企业简介：</th>
+            <td colspan="3">本公司是一家专业从事各类灭火器系列产品设计和制造的企业，十余年来通过引进人才、新设备、新工艺；不断加大产品开发、技术改造和自主创新的力度，现已具有年产干粉、水基、二氧化碳灭火器、合金钢气瓶500万具的生产能力。公司生产设备齐全，检测仪器先进，在册员工320余人，厂房面积28000㎡，总资产12000万元。</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button_down2" id="stat1">
+      	<a href="洽谈会申办审核.html"><input value=" 返回 " class="button" type="button" style="margin-left:550px;"  /></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

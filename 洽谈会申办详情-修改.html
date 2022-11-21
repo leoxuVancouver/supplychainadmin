@@ -1,0 +1,352 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>建行电子商务服务平台</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/yyzs.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery-calendar.css" rel="stylesheet" type="text/css" /> 
+<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="js/jquery-calendar.js" type="text/javascript"></script>
+<!--弹出窗的CSS和JS-->
+<link rel="stylesheet" type="text/css" href="css/promptCss.css"/>
+<script type="text/javascript" src="js/promptDialog.js"></script>
+<!--判断和弹出窗的CSS和JS-->
+<script type="text/javascript" src="js/util.js"></script>
+<!--拖拽移动-->
+<script type="text/javascript" src="js/jquery-ui-1.js"></script> 
+</head>
+
+<body>
+<div id="main">
+  <div class="top-tab">
+    <ul>
+      <li class="tab-home">首页</li>
+      <li class="tab-link">洽谈会详情修改</li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <!--<div class="top-title">当前位置：<a href="javascript:;">在线洽谈会</a> ><a href="企业申办意向管理.html">申办意向管理</a> >洽谈会详情</div>-->
+    <div class="top-title mt10">
+      <ul>
+        <li id="hand-li" class="on"><a href="javascript:;" id="hand">洽谈会详情修改</a></li>
+      </ul>
+    </div>
+    <!-- <a href="洽谈会申办审核.html"><input value="返回" class="button" type="button" style="float:right; margin:10px;"></a> -->
+    <div id="market-info-hand">
+      <table border="1" cellspacing="0" class="table table-add mt10 mb10 w810 sbyxxq" style=" width:100%;margin-bottom:0px;" id="dial-mob">
+        <thead>
+          <tr>
+            <th colspan="4" style="text-align:center; font-size:14px;">洽谈会详情修改</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+        	<th width="11%">洽谈会编号：</th>
+            <td width="39%">A2015091801</td>
+             <th width="11%">洽谈会主题：</th>
+            <td width="39%"><input type="text"  class="input w300" value="服装面料"></td>
+        </tr>
+          <tr>
+            <th width="11%">洽谈会类型：</th>
+            <td width="39%">
+            	<select class="select" style="float:left; width:202px;" id="gqselect">
+                <option value="1" selected="selected">采购</option>
+                <option value="2">供应</option>
+              </select>
+            </td>
+            <th>行业类目：</th>
+            <td>
+            		<select class="select" style="float:left; width:202px;">
+	            		<option>女装</option>
+									<option>鞋类</option>
+									<option>箱包</option>
+									<option>茶叶茶具</option>
+									<option>化学</option>
+									<option>童装</option>
+									<option>数码电子</option>
+									<option>农业</option>
+									<option>化工</option>
+									<option>电子材料</option>
+									<option>建筑材料</option>
+									<option>生活用品</option>
+									<option>宠物用品</option>
+								</select>
+            </td>
+          </tr>
+          <tr>
+            <th>洽谈金额：</th>
+            <td><input type="text"  class="input w200" value="300">万元</td>
+            <th>洽谈起止时间：</th>
+            <td><input type="text" name="qtqzshijian" id="qtqzshijian" class="input ipt-date1" maxlength="10" onfocus="$(this).calendar()" readonly value="2015-09-07"/>
+            		<select class="select" style="width:100px;">
+	                <option>08:00</option>
+                  <option selected="selected">09:00</option>
+                  <option>10:00</option>
+                  <option>11:00</option>
+                  <option>12:00</option>
+                  <option>13:00</option>
+                  <option>14:00</option>
+                  <option>15:00</option>
+                  <option>16:00</option>
+                  <option>17:00</option>
+                  <option>18:00</option>
+	              </select>至&nbsp;&nbsp;
+	              <select class="select" style="width:100px;">
+	                <option>08:00</option>
+                  <option>09:00</option>
+                  <option>10:00</option>
+                  <option>11:00</option>
+                  <option>12:00</option>
+                  <option>13:00</option>
+                  <option>14:00</option>
+                  <option selected="selected">15:00</option>
+                  <option>16:00</option>
+                  <option>17:00</option>
+                  <option>18:00</option>
+	              </select>
+            </td>
+          </tr>
+          <tr>
+            <th width="11%">报名截止时间：</th>
+            <td colspan="3">
+            	<input type="text" name="bmzzshijian" id="bmzzshijian" class="input ipt-date1" maxlength="10" onfocus="$(this).calendar()" readonly value="2015-09-08"/>
+            </td>
+          </tr>
+          <tr>
+            <th><lable id="labname">采购清单：</lable></th>
+            <td colspan="3">
+            	<table border="1" cellspacing="0" class="table-add2"  width="80%">
+                  <tr>
+                    <th width="40%" >产品名称</td>
+                    <th width="20%">规格描述</td>
+                    <th width="10%">数量</td>
+                    <th width="10%">单位</td>
+                    <th width="20%">参考价(元）</td>
+                  </tr>
+                  <tr>
+                    <td>毛绒</td>
+                    <td>100%羊毛</td>
+                    <td>100</td>
+                    <td>米</td>
+                    <td><input type="text"  class="input w100" value="300" style="text-align:right;"></td>
+                  </tr>
+            	</table>
+            </td>
+          </tr>
+          <tr>
+            <th width="11%">其它说明：</th>
+            <td colspan="3">
+            	<textarea class="textArea sa07" name="qtsm"  cols="70" rows="6" style="float:left"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th width="11%">报名方要求:</th>
+            <td colspan="3">
+            	<table width="380">
+            		<tr>
+            			<td>
+            				<div  id="tableAFS"><label>  
+											<input type="text" name="Title" id="Title" class="input w300" value="公司营业执照"/><input name="button" type="button" onClick="removeTextBox(this)" value="删除" /></label>
+											</div> 
+											<input name="button" type="button" onClick="addTextBox()" value="增加" style="margin-top:5px;"/> 
+            				</td>
+            		</tr>
+            	</table>
+            	 <br />
+            	其它要求：<br />
+            	<textarea class="textArea sa07" name="bmyq"  cols="70" rows="3" style="float:left"></textarea>
+            </td>
+          </tr>
+        <thead>
+          <tr>
+            <th colspan="4" style="text-align:center; font-size:14px;">管理员</th>
+          </tr>
+        </thead>
+         <tbody>
+          <tr>
+            <th><font color="red">*</font> 管理员：</th>
+            <td colspan="3">
+            	<label id="adminN" style="margin:0px 15px;"></label><input type="button" id="btnGly" value=" 设置管理员 " class="button szgly">
+            </td>
+          </tr>
+         </tbody>
+        <thead>
+          <tr>
+            <th colspan="4" style="text-align:center; font-size:14px;">企业资质</th>
+          </tr>
+        </thead>
+        <tbody>
+        	<tr>
+            <th>用户名：</th>
+            <td><input type="text"  class="input w200" value="zhangxiao"></td>
+            <th>企业名称：</th>
+            <td>广州加嘉大商贸有限公司</td>
+          </tr>
+          <tr>
+            <th>企业所在地：</th>
+            <td>
+            	<select class="select">
+                <option value="0">请选择</option>
+                <option value="1">北京市</option>
+                <option value="2">上海市</option>
+                <option value="3" selected="selected">广东省</option>
+                <option value="4">山东省</option>
+              </select>
+              <select class="select">
+                <option value="0">请选择</option>
+                <option value="1" selected="selected">广州市</option>
+                <option value="2">深圳市</option>
+                <option value="3">佛山市</option>
+              </select>
+            </td>
+            <th>企业性质：</th>
+            <td><select class="select">
+                <option value="0">请选择</option>
+                <option value="1" selected="selected">私营企业</option>
+                <option value="2">国营企业</option>
+                <option value="3">合资企业</option>
+              </select></td>
+          </tr>
+          <tr>
+            <th>联系人：</th>
+            <td><input type="text"  class="input w200" value="张小娴"></td>
+            <th>联系电话：</th>
+            <td><input type="text"  class="input w200" value="13501234567"></td>
+          </tr>
+           <tr>
+            <th>企业简介：</th>
+            <td colspan="3"><textarea class="textArea sa07" name="qyjj"  cols="130" rows="5" style="float:left" >广州加嘉大商贸有限公司经销的服装、服饰、布匹品种齐全、价格合理。广州加嘉大商贸有限公司实力雄厚，重信用、守合同、保证产品质量，广州加嘉大商贸有限公司经销的服装、服饰、布匹品种齐全、价格合理。</textarea></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button_down2">
+      	<input value=" 修 改 " class="button xg" type="button" style="margin-left:300px;"/>
+      	<a href="洽谈会管理.html"><input value=" 取 消 " class="button" type="button" style="margin-left:30px;"  /></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--选择管理员-->
+<div class="szglyDiv" style="width:540px; display:none; margin:5px;">
+	<div><input type="text"  class="input w300" style="margin:10px 30px;" placeholder="账号/姓名/联系电话" value="张有为"><input value=" 搜 索 " type="button" class="button" id="ssgly" /></div>
+	<div style="border:1px solid #eed9d9;margin:10px;height:250px;overflow:scroll;">
+	  <table border="1" cellspacing="0" id="userDetail" class="table" style="margin:5px;width:480px;align:center;" >
+        <tbody>
+        <thead>
+          <tr style="background-color:#fbf6f6;heigh:25px;">
+          	<th>&nbsp;</th>
+            <td>账号</td>
+            <td>姓名</td>
+            <td>联系电话</td>
+          <!--  <td>操作</td> -->
+          </tr>
+        </thead>
+          <tr>
+          	<td><input id="uSelect" type="radio" value="1" checked/> </td>
+          	<td><lable id="uNo" class="uNo" style="display:block;"> zhangyouwei</lable></td>
+            <td><lable id="uName" class="uName" style="display:block;"> 张有为</lable></td>
+            <td><lable id="uMobile" class="uMobile" style="display:block;"> 13913313588</lable></td>
+           <!--  <td ><input value=" 选 择 " id="uBtn" class="button uBtn" type="button" style="display:block;margin-left:30px"/></td>	-->
+          </tr>
+        </tbody>
+    </table>      
+  </div>
+</div> 
+
+<script>
+
+$(function(){
+	/*修改*/
+	$('.xg').click(function(e) {
+    var $this = $(this);
+			m.promptDialog({
+			context:'您确定修改洽谈会详情吗？',
+			cancleBtnValue:'取消',
+			okBtnValue:'确定',
+			okBtnFn:function(){
+				location.href="洽谈会管理.html";
+					//indexInit();
+					//$this.parent().html('<a href="javascript:;" class="blue_l">查看</a>').prev().html('通过');
+					//greenTips("操作成功");
+				}
+			})
+  });	
+	/*更改洽谈会类型 */
+	$('#gqselect').change(function(e){
+		 if ($('#gqselect').val()==1){
+		 	//$('#labname').innerHTML='采购清单：';
+		 	document.getElementById('labname').innerHTML ='采购清单：';
+		}
+		else{
+			//$('#labname').innerHTML='供应清单：';
+			document.getElementById('labname').innerHTML ='供应清单：';
+		}
+	});
+	
+	/*选择管理员*/
+	$('.szgly').click(function(e) {
+    var $this = $(this);
+			m.promptDialog({
+			title: "添加管理员",
+			contObj:$(".szglyDiv"),	
+			cancleBtnValue:'取消',
+			okBtnValue:'选择',
+			okBtnFn:function(){ 
+
+				//	$("#adminN").val("张有为");
+					document.getElementById('adminN').innerHTML ='张有为 13913313588';
+				}
+			})
+  });
+  
+})
+</script>
+
+<script type="text/javascript">  
+var idNumber = 1,id="tableAFS";  
+function addTextBox() {  
+  idNumber++;  
+  //这里我们创建一个label控件  
+  label0 = document.createElement("label");  
+  label0.setAttribute("id","label"+idNumber);  
+  //创建输入框  
+  var textField = document.createElement("input");  
+  textField.setAttribute("type","text");  
+  textField.setAttribute("name","Title");  
+  textField.setAttribute("id","Title"+idNumber); 
+  textField.setAttribute("class","input w300");
+  label0.appendChild(textField);  
+  //创建按钮  
+  var textField2 = document.createElement("input");  
+  textField2.setAttribute("type","button");  
+  textField2.setAttribute("name","button");  
+  textField2.setAttribute("value","删除");  
+  textField2.onclick=function(){removeTextBox(this)}  
+  label0.appendChild(textField2);  
+    
+  document.getElementById(id).appendChild(label0);  
+}  
+function removeTextBox(o) {  
+  var t=document.getElementById(id).getElementsByTagName("label").length;  
+  if ( t> 1)  //如果超过1个textbox  
+    document.getElementById(id).removeChild(o.parentNode);  
+}  
+function show()  
+{  
+var t=document.getElementById(id).getElementsByTagName("label").length;  
+var allText = document.getElementById(id).getElementsByTagName("input");  
+var s = "";  
+for(i=0;i<allText.length;i++)  
+{  
+if(allText[i].id.indexOf('Title')=="0"){   
+s = s+allText[i].value + "/n" ;  
+}     
+}  
+alert(s);  
+}  
+</script>  
+</body>
+</html>

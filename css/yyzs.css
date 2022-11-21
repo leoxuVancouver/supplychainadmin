@@ -1,0 +1,71 @@
+@charset "utf-8";
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+.clearfix:after {
+    clear: both;
+}
+.main-content  .sh{ color:#f00; cursor:default; }
+.main-content  .sh:hover{ color:#f00; text-decoration:none;}
+
+/*洽谈会白名单*/
+.bmd{ width:1050px;}
+.bmd .table-add .txt_l{ text-align:left;}
+.bmd_top_all_add{ float:right; margin-top:3px; margin-right:79px; display:block;}
+.inp_yyzx{ height:12px; padding:6px; line-height:12px; border:1px solid #eed9d9; width:48px; text-align:center;}
+.bmd .table td{ text-align:center;padding:2px 5px 2px 5px;}
+.bmd thead td{ font-weight:bold; background:#fbf6f6;}
+.bmd_tab{ width:1050px;}
+.search-bar table td .button{ float:right;}
+
+
+/*发起洽谈会*/
+.txtc .table th{ text-align:center;}
+.txtc .table td.last{ border-width:0 0 0 1px;}
+.txtc thead .cloneTr{ display:none;}
+.fqqth_spxx_add{ width:20px; height:20px; background:url(../images/yyzs/fq.jpg) no-repeat; display:block;}
+.fqqth_spxx_delect{width:20px; height:20px; display:block; background:url(../images/yyzs/fq.png) no-repeat;}
+.add_box input{  height: 22px;line-height: 22px;text-indent: 3px;margin: 0;padding: 0;width: 148px;border:0; outline:none; }
+
+/*企业申办意向 border:1px solid #eed9d9;*/
+.main_top_sel{ height:24px; line-height:24px;width:150px; margin:0; padding:0;}
+.qysbyx .main_top{  margin-left:10px; width:667px;}
+.qysbyx .main_top .button{ float:right;}
+.qysb_tab{ width:960px;}
+
+.p_input .button{ margin:1px;}
+.yq_top_all_add{ margin-top:3px;}
+
+#jgpg th{ text-align:right;}
+#jgpg td{ text-align:left;}
+
+.hygl_sel{ position:relative; margin:2px 5px; background:#d6d6d6;}
+.hygl_sel_show{ margin:3px; padding-left:3px; position:relative; line-height:24px; text-align:left; background:url(../images/yyzs/xia.png) center right no-repeat; cursor:pointer; display:block;}
+.hygl_sel span.hover{ background:url(../images/yyzs/shang.png) no-repeat center right; cursor:pointer; z-index:55;}
+.hygl_sel_hide{ position:absolute; top:23px; background:#fbf6f6; border:1px solid #FFcccc; padding:0 5px; width:145px; display:none; text-align:left; z-index:2;}
+.main-content .hygl_sel_hide a{ color:#333;}
+.main-content .hygl_sel_hide a:hover{color:#F60;}
+.zs{ background:url(../images/yyzs/zs.jpg) no-repeat center right #F3E7E7; padding-right:17px; height:16px; display:inline-block; width:50px;}
+
+.txtAr{ padding:5px; height:100px;  width:188px; border:1px solid #a9a9a9; float:left; margin-right:5px;}
+.textArea3{ overflow-y:scroll;}
+.sa03 span{ background:#ccc;display:inline-block; margin:0 2px;}
+.sa03 j{ display:inline-block; padding:3px; float:left;}
+.sa03 i{background:url(../images/action_delete.png) no-repeat center center; display:inline-block; width:14px; height:24px; float:right; cursor:pointer;}
+
+#ck th{ text-align:right;} 
+#ck td{ text-align:left;}
+.bor-0 th,.bor-0 td{ background:#fff; border:0;}
+.bmsh th{ text-align:right;}.bmsh td{ text-align:left;}
+
+
+
+
+
+.disnone{ display:none;}
+

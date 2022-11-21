@@ -1,0 +1,440 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>建行电子商务服务平台</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/thickbox.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/jquery-calendar.css" rel="stylesheet" type="text/css" />
+<link href="css/yyzs.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="js/jquery-calendar.js" type="text/javascript"></script>
+<!--弹出窗的CSS和JS-->
+<link rel="stylesheet" type="text/css" href="css/promptCss.css"/>
+<script type="text/javascript" src="js/promptDialog.js"></script>
+<!--判断和弹出窗的CSS和JS-->
+<script type="text/javascript" src="js/util.js"></script>
+<!--拖拽移动-->
+<script type="text/javascript" src="js/jquery-ui-1.js"></script> 
+<script>
+		function loadfunction()
+	{
+
+    var url =  this.location.search;
+    var newstr=url.replace("?hid=","");
+    if (newstr==1)	//第一条审核通过消失，数据跑到会议管理页
+    {
+    	 $('#sbsh tr:eq(1)').hide();
+		 $("#state1").text("报名中");
+		 $("#state2").text("王语妍");
+		 $("#state3").text("已发布");
+		 $("#state4").hide();
+		 $("#state5").show();
+		 
+    }
+    if (newstr==2)
+    {
+    	 $('#sbsh tr:eq(1)').hide();
+		 $("#state1").text("审核不通过");
+		 $("#state2").text("-");
+		 $("#state3").text("审核不通过");
+		 $("#state4").hide();
+		 $("#state6").show();		 
+    	 
+    }
+	}
+	
+	$(function(){
+			$('.top-title ul li').click(function(){
+				$(this).addClass('on').siblings('li').removeClass('on');
+				var _index=$(this).index();
+				$('.div_tab').eq(_index).show().siblings('.div_tab').hide();	
+				
+			})
+	})
+</script>
+
+</head>
+
+<body onload="loadfunction()">
+<div id="main" class="bmd">
+  <div class="top-tab">
+    <ul>
+      <li class="tab-home">首页</li>
+      <li class="tab-link">洽谈会申办审核</li>
+    </ul>
+  </div>
+  <div class="main-content">
+       <!--<div class="top-title">当前位置：<a href="javascript:;">在线洽谈会</a> > 洽谈会审核</div>-->
+       <div class="top-title mt10">
+         <ul>
+            <li id="hand-li" class="on"><a href="javascript:;" id="hand">洽谈会申办审核</a></li>
+         </ul>
+       </div>
+       <div class="review div_tab" style="display:block;">
+         <div id="market-info-hand" class="qysbyx">
+			<div class="search-bar">
+				<table width="1100">
+					<tr>
+						<th width="110">洽谈会主题：</th>
+						<td><input name="title" type="text" class="input" maxlength="40" /></td>
+						<th width="110">申办企业：</th>
+						<td width="110"><input name="title" type="text" class="input" maxlength="40" /></td>
+						<th width="110">洽谈会类型：</th>
+						<td><select class="main_top_sel">
+							<option>全部</option>
+							<option>采购</option>
+							<option>供应</option>
+							</select></td>
+						<th width="110">洽谈会状态：</th>
+						<td><select class="main_top_sel">
+							<option>请选择</option>
+							<option>审核中</option>
+							<option>审核不通过</option>
+							<option>报名中</option>
+							<option>报名截止</option>
+							<option>洽谈中</option>
+							<option>洽谈结束</option>
+							<option>已取消</option>
+							</select></td>
+					</tr>
+					<tr>
+						<th width="110">审核状态：</th>
+						<td><select class="main_top_sel">
+						  <option>请选择</option>
+						  <option>待审核</option>
+						  <option>审核不通过</option>
+						  <option>已发布</option>
+						</select></td>
+						<th width="110">洽谈会起止时间：</th>
+						<td colspan="3"><input type="text" name="kcshijian" id="kcshijian" class="input ipt-date1" maxlength="10" onfocus="$(this).calendar()" readonly /> 至 <input type="text" name="jsshijian" id="jsshijian" class="input ipt-date1" maxlength="10" onfocus="$(this).calendar()" readonly /><input value="查询" id="button_query" class="button" type="button" style="margin-top:4px;">
+						</td>
+						<td></td>	
+					</tr>
+				</table>
+			</div>
+		 </div>
+                           <table border="1" cellspacing="0" class="table " id="gltable">
+                    <thead>
+                      <tr>
+                        <td>洽谈会编号</td>
+                        <td>洽谈会主题</td>
+                        <td>申办时间</td>
+                        <td>申办企业</td>
+                        <td>洽谈会类型</td>
+                        <td>洽谈金额<br>(万元)</td>
+                        <td width="10%">洽谈起止时间</td>
+                        <td>洽谈会状态</td>
+                        <td>管理员</td>
+                        <td>审核状态</td>
+                        <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                   <tr>
+                        <td>091302</td>
+                        <td class="text-left">紧急采购各类裘皮原料，裘皮制品</td>
+                        <td>2015-12-09 08:30</td>
+                        <td class="text-left"><a href="javascript:;">尼亚拉服装皮革有限公司</a></td>
+                        <td>采购</td>
+                        <td>320</td>
+                        <td>2015-12-26 10:00-14:30</td>
+                        <td id="state1">审核中</td>
+                        <td id="state2">-</td>
+                        <td id="state3">待审核</td>
+                        <td class="text-left"><a href="洽谈会申办详情-审核.html" class="blue_l" style="text-align:left;"  id="state4">审核</a><span id="state5" style="display:none;"> <a href="洽谈会申办详情-采购.html" class="blue_l a_ck">详情</a> <a href="javascript:;" class="blue_l" id="cancel_meet">取消会议</a></span><span id="state6" style="display:none;"><a href="洽谈会申办详情-采购.html" class="blue_l" style="text-align:left;">详情</a> <a href="javascript:;" class="blue_l jjyy">拒绝原因</a></span></td> 
+                      </tr>
+                      <tr>
+                        <td>082709</td>
+                        <td class="text-left">欧伦泰防火设备供应</td>
+                        <td>2015-12-13 14:00</td>
+                        <td class="text-left"><a href="javascript:;">欧伦泰防火设备有限公司</a></td>
+                        <td>供应</td>
+                        <td style="text-align:center">100</td>
+                        <td>2015-12-20 09:00-15:00</td>
+                        <td><span class="baoming">报名中</span></td>
+                        <td>王语妍</td>
+                        <td>已发布</td>
+                        <td class="text-left tex_a">
+                        	<a href="洽谈会申办详情.html">详情</a><!--  <a href="javascript:;">修改</a> --> <a href="javascript:;" class="blue_l" id="cancel_meet">取消会议</a> <a href="洽谈会申办详情.html" style="display:none;" class="blue_l a_ck">详情</a> <a href="javascript:;" class="blue_l qxyy a_qxyy" id="aaa" style="display:none;">取消原因</a>
+                        </td>
+                      </tr>
+                      <tr>
+                    <td>091402</td>
+                    <td class="text-left">机器热转印的油墨大额供应</td>
+                    <td>2015-12-11 14:30</td>
+                    <td class="text-left"><a href="javascript:;">湖北慧智科技有限公司</a></td>
+                    <td>供应</td>
+                    <td>190</td>
+                    <td>2015-12-28 10:20-18:00</td>
+                    <td>审核不通过</td>
+                    <td>-</td>
+                    <td>审核不通过</td>
+                    <td class="text-left"><a href="javascript:;" class="blue_l" style="text-align:left;">详情</a> <a href="javascript:;" class="blue_l jjyy">拒绝原因</a></td>
+                  </tr>
+                    <tr>
+                        <td>091801</td>
+                        <td class="text-left">尼亚拉服装长期采购皮革服装制品</td>
+                        <td>2015-11-04 09:00</td>
+                        <td class="text-left"><a href="javascript:;">尼亚拉服装皮革有限公司</a></td>
+                        <td>采购</td>
+                        <td style="text-align:center">320</td>
+                        <td>2015-12-05 14:00-16:00</td>
+                        <td>洽谈中</td>
+                        <td>王语妍</td>
+                        <td>已发布</td>
+                        <td class="text-left"><a href="javascript:;">详情</a></td>
+                      </tr>
+                      <tr>
+                        <td>080301</td>
+                        <td class="text-left">中国重汽集团首次大额采购会</td>
+                        <td>2015-09-10  09:00</td>
+                        <td class="text-left"><a href="javascript:;">中国重型汽车集团有限公司</a></td>
+                        <td>采购</td>
+                        <td style="text-align:center">500</td>
+                        <td>2015-11-15 08:30-12:00</td>
+                        <td>洽谈结束</td>
+                        <td>张晓</td>
+                        <td>已发布</td>
+                        <td class="text-left"> <a href="javascript:;">详情</a> <a href="javascript:;" class="blue_l txpg" id="acont1">会议评估</a> <a href="javascript:;" class="blue_l bjpgny" id="acont2" style="display:none;">编辑结果评估</a></td>
+                      </tr>
+                      <tr>
+                    <td>090603</td>
+                    <td class="text-left">服装材料、饰品大采购</td>
+                    <td>2015-09-06 15:00</td>
+                    <td class="text-left"><a href="javascript:;">广州市朗冠服装有限公司</a></td>
+                    <td>采购</td>
+                    <td>120</td>
+                    <td>2015-09-08 14:00-16:00</td>
+                    <td>已取消</td>
+                    <td>吴明</td>
+                    <td>已发布</td>
+                    <td class="text-left"><a href="javascript:;" class="blue_l">详情</a> <a href="javascript:;" class="blue_l">取消原因</a></td>
+                  </tr>
+                    </tbody>
+                  </table>
+
+              <dl class="page-link pb10 clear">
+                    <dd class="fl"> <span>首页</span> <span>上一页</span> <span>下一页</span> <span>末页</span> 第1页 共1页 共6条
+                      <input type="text" name="jumppageNO" id="jumppageNO" class="input pageNo" value="" />
+                      <input type="button" value="跳转" class="button pageGo" style="margin-right:0" />
+                </dd>
+         </dl>
+       </div>
+    </div>
+	
+<!--取消会议原因弹层-->
+<div style="width:505px;overflow:hidden;margin:5px;line-height:30px;display:none;" id="CancelMeeting">
+  <table class="table-tan" cellpadding="0" cellspacing="0">
+   <!-- <tr>
+      <th>取消会议原因:</th>
+      <td><select class="main_top_sel">
+                <option value="1">无采购意向</option>
+				<option value="2">无人报名</option>
+              </select></td>
+     </tr> -->
+     <tr>
+      <th valign="top">取消会议原因:</th>
+      <td>
+         <textarea class="txtarea" style="line-height:20px; width:355px; height:98px; margin:5px 0;"></textarea><br/>5-100字
+      </td>
+  </tr>
+</table>
+</div>
+<!--查看取消原因弹层-->
+<div  class="shqxyy" style="width:540px; display:none; margin:5px;">
+  <table class="table-tan" cellpadding="0" cellspacing="0">
+     <tr>
+      <th>取消会议原因:</th>
+      <td>
+         因无人报名，申办方申请取消会议。
+      </td>
+  </tr>
+     <tr>
+      <th>取消时间:</th>
+      <td>
+         2015-12-18 19:59:23
+      </td>
+  </tr>
+</table>
+</div>
+
+<!--拒绝原因查看弹层-->
+<div class="shjjyy" style="width:540px; display:none; margin:5px;">
+  <table class="table-tan">
+    <tr>
+      <th>拒绝原因：</th>
+      <td>写得不够清楚</td>
+    </tr>
+    <tr>
+      <th>拒绝时间：</th>
+      <td>2015-12-23 14:00:00</td>
+    </tr>
+  </table>
+</div> 
+
+<!--填写评估弹层-->           
+<div class="shtxpg" style="width:540px; display:none; margin:5px;">
+  <table class="table">
+  	<tr>
+      <th valign="top">成交金额：</th>
+      <td style="text-align:left;"><input name="je" type="text" class="input" maxlength="40" />万元</td>
+    </tr>
+    <tr>
+      <th valign="top">会议评估：</th>
+      <td style="text-align:left;"><textarea rows="10" cols="60" style="padding:5px;" ></textarea><br/>5~1000字</td>
+    </tr>
+  </table>
+</div>  
+<!--编辑评估内容弹层-->           
+<div class="shbjpg" style="width:540px; display:none; margin:5px;">
+  <table class="table">
+  	<tr>
+      <th valign="top">成交金额：</th>
+      <td style="text-align:left;"><input name="je" type="text" class="input" maxlength="40" value="300"/>万元</td>
+    </tr>
+    <tr>
+      <th valign="top">会议评估：</th>
+      <td style="text-align:left;"><textarea rows="10" cols="60" style="padding:5px;" >2015年11月16日中国重汽集团杭州发动机有限公司首次与湖南东方时代新能源科技有限公司签订采购合同，成交金额500万。
+湖南东方时代新能源科技有限公司负责人朱前进说：我们是在15年10月20日与善融网合作的，当时只是抱着试试看的态度，早就听说善融网的服务非常不错。万万没想到，上线不足一个月，就接到了这么大的订单，不仅提高了自己产品的知名度，还大大节省了成本。衷心感谢善融网的服务，让我更加重视互联网渠道！</textarea><br/>5~1000字</td>
+    </tr>
+  </table>
+</div> 
+
+<div class='showTips'></div>
+  <div class='greenTips'></div>
+  
+<script>
+$("#cancel_meet").live("click",function(){
+		m.promptDialog({title:"取消会议",cancleBtnValue:"取消",contObj:$("#CancelMeeting"),okBtnValue:'确定',
+					okBtnFn:function(){
+						indexInit();
+						//greenTips("取消成功");
+						$(".cancel_meet_zt").html('取消待复核');
+						/*$('#cancel_meet').parent().html('<a href="javascript:;" class="blue_l">查看</a> <a href="javascript:;" class="blue_l qxyy" id="aaa">取消原因</a>');*/
+						$('.tex_a a').hide();
+						$('.a_ck,.a_qxyy').show();
+						$(".baoming").text('已取消');
+						//var num=parseInt($("#PageAll").html())-1;
+						//$('#PageAll').html(num);
+					},});
+	});
+	
+	
+	$(function(){
+	/*拒绝*/
+	$('.jj').click(function(e) {
+    var $this = $(this);
+			m.promptDialog({
+			//contObj:$(".shjj"),	
+			context:'确认拒绝？',
+			cancleBtnValue:'取消',
+			okBtnValue:'确定',
+			okBtnFn:function(){
+					m.promptDialog({
+						//context:'确认拒绝？',
+						title: "拒绝原因",
+						contObj:$(".shjj"),
+						cancleBtnValue:'取消',
+						okBtnValue:'提交',
+						okBtnFn:function(){
+							
+							indexInit();
+							$this.parent().html('<a href="洽谈会申办详情.html" class="blue_l">查看</a>').prev().html('拒绝');
+							//greenTips("操作成功");
+							}
+						})
+				}
+			})
+  });
+  /*通过*/
+	$('.tg').click(function(e) {
+    var $this = $(this);
+			m.promptDialog({
+			context:'您确定审核通过吗？',
+			cancleBtnValue:'取消',
+			okBtnValue:'确定',
+			okBtnFn:function(){
+					indexInit();
+					$this.parent().html('<a href="javascript:;" class="blue_l">查看</a>').prev().html('通过');
+					//greenTips("操作成功");
+				}
+			})
+  });	
+  /*重审核*/
+  $('.chs').click(function(e) {
+    var $this = $(this);
+			m.promptDialog({
+			context:'是否重审该洽谈会？',
+			cancleBtnValue:'取消',
+			okBtnValue:'确定',
+			okBtnFn:function(){
+					$('#sbfail tr:eq(1)').hide();
+				}
+			})
+  });	
+	
+	/*拒绝原因*/
+	$('.jjyy').click(function(e) {
+    var $this = $(this);
+			m.promptDialog({
+			title: "拒绝原因",
+			contObj:$(".shjjyy"),	
+			//cancleBtnValue:'取消',
+			okBtnValue:'确定',
+			})
+  });
+  
+	/*拒绝原因*/
+	$('#aaa').click(function(e) {
+    var $this = $(this);
+			m.promptDialog({
+			title: "取消原因",
+			contObj:$(".shqxyy"),	
+			//cancleBtnValue:'取消',
+			okBtnValue:'确定',
+			})
+  });
+})
+
+
+
+
+
+	/*填写评估*/
+	$('.txpg').click(function(e) {
+    var $this = $(this);
+			m.promptDialog({
+				title: "结果评估",
+				contObj:$(".shtxpg"),	
+				cancleBtnValue:'取消',
+				okBtnValue:'确定',
+				okBtnFn:function(){
+						$('#acont1').hide();
+						$('#acont2').show();
+				}
+			})
+  });
+  
+  /*编辑评估内容*/
+	$('.bjpgny').click(function(e) {
+    var $this = $(this);
+			m.promptDialog({
+				title: "编辑评估内容",
+				contObj:$(".shbjpg"),	
+				cancleBtnValue:'取消',
+				okBtnValue:'确定',
+				//okBtnFn:function(){
+				//	m.promptDialog({
+				//		context:'确认编辑评估内容？',
+				//		cancleBtnValue:'取消',
+				//		okBtnValue:'确定',
+				//		})
+				//}
+			})
+  });
+
+</script>
+</body>
+</html>

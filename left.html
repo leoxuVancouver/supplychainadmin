@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>建行电子商务服务平台</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script>
+//左侧导航菜单处理
+function initMenu() {
+  $('#left dd a').click(
+    function() {
+	$('#left dd').removeClass('menu-on');
+	$(this).parent().addClass('menu-on'); 
+      }
+    );
+  }
+$(document).ready(function() {initMenu();});
+</script>
+</head>
+
+<body style="background:#F1E5E5;">
+<div id="left">
+  <dl class="left-menu">
+    <!--<dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="javascript:;" target="mainFrame">会员管理</a></dd>
+		<dd class="menu3"><img src="images/ico-point.gif" /><a href="javascript:;" target="mainFrame">企业会员</a></dd>
+		<dd class="menu3"><img src="images/ico-arrow1.gif" /><a href="javascript:;" target="mainFrame">信用查询</a></dd>
+			<dd class="menu4"><img src="images/ico-point.gif" /><a href="javascript:;" target="mainFrame">信用指数</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="javascript:;" target="mainFrame">业务处理</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="###" target="mainFrame">专业市场</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="###" target="mainFrame">内容管理</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="###" target="mainFrame">统计分析</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="###" target="mainFrame">系统维护</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="###" target="mainFrame">复核管理</a></dd>
+    <dd class="menu3"><img src="images/ico-point.gif" /><a href="javascript:;" target="mainFrame">待办事项</a></dd>
+    <dd class="menu3"><img src="images/ico-point.gif" /><a href="javascript:;" target="mainFrame">流程管理</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="#" target="mainFrame">对账管理</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="#" target="mainFrame">金融服务</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="#" target="mainFrame">E积分管理</a></dd>
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="javascript:;" target="mainFrame">地方汇</a></dd> -->
+    <dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="javascript:;" target="mainFrame">活动管理</a></dd>
+		<dd class="menu3"><img src="images/ico-arrow1.gif" /><a href="javascript:;" target="mainFrame">在线洽谈会管理</a></dd>
+			<dd class="menu4"><img src="images/ico-point.gif" /><a href="洽谈会申办审核.html" target="mainFrame">洽谈会申办审核</a></dd>
+			<dd class="menu4"><img src="images/ico-point.gif" /><a href="洽谈会名单审核.html" target="mainFrame">报名名单审核</a></dd>
+			<dd class="menu4"><img src="images/ico-point.gif" /><a href="楼层管理.html" target="mainFrame">楼层管理</a></dd>
+			<dd class="menu4"><img src="images/ico-point.gif" /><a href="所属楼层.html" target="mainFrame">区块管理</a></dd>
+			<dd class="menu4"><img src="images/ico-point.gif" /><a href="管理员.html" target="mainFrame">管理员管理</a></dd>
+    <!--<dd class="menu1"><img src="images/ico-arrow1.gif" /><a href="javascript:;" target="mainFrame">产业管理</a></dd>
+ 	<dd class="menu3"><img src="images/ico-point.gif" /><a href="javascript:;" target="mainFrame">专题管理</a></dd>
+		<dd class="menu3"><img src="images/ico-point.gif" /><a href="javascript:;" target="mainFrame">频道管理</a></dd>
+		<dd class="menu3"><img src="images/ico-point.gif" /><a href="javascript:;" target="mainFrame">楼层管理</a></dd>
+ 		<dd class="menu3"><img src="images/ico-point.gif" /><a href="javascript:;" target="mainFrame">自动推荐管理</a></dd>
+		<dd class="menu3"><img src="images/ico-point.gif" /><a href="javascript:;" target="mainFrame">审核管理</a></dd> -->
+  </dl>
+</div>
+</body>
+</html>
